@@ -1,5 +1,5 @@
 # nubank
-This is my own nubank app the nu_joao
+This is my own nubank app the nu_joao <br>
 A new Flutter project.
 
 ## Getting Started
