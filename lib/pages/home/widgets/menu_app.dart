@@ -13,53 +13,54 @@ class MenuApp extends StatelessWidget {
       left: 0,
       right: 0,
       child: AnimatedOpacity(
-        duration: Duration(milliseconds: 200),
+        duration: Duration(milliseconds: 100),
         opacity: showMenu ? 1 : 0,
         child: Container(
           //color: Colors.red,
           height: MediaQuery.of(context).size.height * 0.55,
-          child: Column(
-            children: [
-              Image.network(
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png",
-                height: 120,
-                color: Colors.white,
-              ),
-              Text.rich(
-                TextSpan(text: 'Banco ', children: [
-                  TextSpan(
-                      text: '260 - Nu Pagamentos S.A',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ]),
-                style: TextStyle(fontSize: 12),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Text.rich(
-                TextSpan(text: 'Agencia ', children: [
-                  TextSpan(
-                      text: '0001',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ]),
-                style: TextStyle(fontSize: 12),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Text.rich(
-                TextSpan(text: 'Conta ', children: [
-                  TextSpan(
-                      text: '0000000-0',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ]),
-                style: TextStyle(fontSize: 12),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              SingleChildScrollView(
-                child: Padding(
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                Image.network(
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png",
+                  height: 100,
+                  color: Colors.white,
+                ),
+                Text.rich(
+                  TextSpan(text: 'Banco ', children: [
+                    TextSpan(
+                        text: '260 - Nu Pagamentos S.A',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ]),
+                  style: TextStyle(fontSize: 12),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text.rich(
+                  TextSpan(text: 'Agencia ', children: [
+                    TextSpan(
+                        text: '0001',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ]),
+                  style: TextStyle(fontSize: 12),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text.rich(
+                  TextSpan(text: 'Conta ', children: [
+                    TextSpan(
+                        text: '0000000-0',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ]),
+                  style: TextStyle(fontSize: 12),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Column(children: [
                     ItemMenu(
@@ -105,8 +106,8 @@ class MenuApp extends StatelessWidget {
                     ),
                   ]),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

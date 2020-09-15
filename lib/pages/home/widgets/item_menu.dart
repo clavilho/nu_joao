@@ -8,7 +8,7 @@ class ItemMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 31,
+      height: 40,
       decoration: BoxDecoration(
           border: Border(
               bottom: BorderSide(width: 0.7, color: Colors.white54),
@@ -29,7 +29,7 @@ class ItemMenu extends StatelessWidget {
               children: [
                 Icon(icon),
                 SizedBox(
-                  width: 15,
+                  width: 25,
                 ),
                 Text(text, style: TextStyle(fontSize: 12)),
               ],
